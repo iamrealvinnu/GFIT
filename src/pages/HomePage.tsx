@@ -103,7 +103,7 @@ const HomePage: React.FC = () => {
   const stats = [
     { number: '50K+', label: 'Active Members', icon: Users, color: 'text-blue-500' },
     { number: '500+', label: 'Expert Trainers', icon: 'logo', color: 'text-green-500' },
-    { number: '100+', label: 'Locations', icon: Calendar, color: 'text-purple-500' },
+    { number: '100+', label: 'Locations', icon: 'logo', color: 'text-purple-500' },
     { number: '95%', label: 'Success Rate', icon: BarChart3, color: 'text-orange-500' }
   ];
 
