@@ -7,7 +7,6 @@ interface AnimatedLogoProps {
 
 const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onAnimationComplete }) => {
   const [currentPhase, setCurrentPhase] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {

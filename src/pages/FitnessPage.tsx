@@ -3,15 +3,13 @@ import { motion } from 'framer-motion';
 import { 
   Dumbbell, 
   Users, 
-  Calendar, 
   Clock, 
   Star, 
   Heart, 
   Zap, 
   Target,
   Play,
-  ArrowRight,
-  MapPin
+  ArrowRight
 } from 'lucide-react';
 
 const FitnessPage: React.FC = () => {
