@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Users, 
   BarChart3, 
@@ -10,14 +10,11 @@ import {
   Heart,
   Brain,
   Apple,
-  Star,
   Sparkles,
-  Target,
   Award
 } from 'lucide-react';
 
 const HomePage: React.FC = () => {
-  const { scrollYProgress } = useScroll();
 
   const membershipTiers = [
     {
