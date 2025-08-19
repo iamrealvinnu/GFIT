@@ -10,7 +10,6 @@ const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onAnimationComplete }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsComplete(true);
       // Add a small delay for the exit animation to complete
       setTimeout(() => {
         onAnimationComplete();
