@@ -11,6 +11,8 @@ A high-quality, responsive web application for gym management with seamless pass
 - **Modern UI/UX**: Beautiful animations and smooth interactions
 - **Animated Loading**: High-quality loading animation with smooth transitions
 - **User Authentication**: Login and signup functionality
+- **App Download Integration**: Seamless mobile app promotion with QR codes
+- **Mobile App Detection**: Smart prompts for mobile users to download native apps
 
 ### Pages & Components
 - **Homepage**: Hero section, features, and call-to-action
@@ -44,6 +46,27 @@ The application is designed with mobile-first principles and can easily be conve
 - **React Native** for mobile apps
 - **Progressive Web App (PWA)**
 - **Electron** for desktop applications
+
+## 🎯 App Download Integration
+
+### Features
+- **App Download Section**: Prominent section on homepage with app features and download buttons
+- **QR Code Generation**: Built-in tool to generate QR codes for app store links
+- **Mobile Detection**: Smart prompts for mobile users to download native apps
+- **Cross-Platform Support**: Android and iOS app store integration
+- **App Store Ratings**: Display app ratings and download counts
+
+### How to Use
+1. **Access QR Generator**: Navigate to `/qr-generator` route
+2. **Generate QR Codes**: Enter your actual app store URLs and generate QR codes
+3. **Download QR Codes**: Save the generated QR codes to your project
+4. **Update Links**: Replace placeholder URLs with your actual app store links
+5. **Customize Content**: Modify app features, ratings, and descriptions as needed
+
+### App Store URLs
+Update these URLs in the components with your actual app store links:
+- **Android**: `https://play.google.com/store/apps/details?id=com.gdinexus.gfit`
+- **iOS**: `https://apps.apple.com/app/gfit/id123456789`
 
 ## 🚀 Getting Started
 
@@ -93,7 +116,10 @@ src/
 │   ├── Footer.tsx      # Footer component
 │   ├── AnimatedLogo.tsx # Loading animation component
 │   ├── PasswordResetForm.tsx      # Password reset form
-│   └── PasswordStrengthIndicator.tsx  # Password strength component
+│   ├── PasswordStrengthIndicator.tsx  # Password strength component
+│   ├── AppDownloadSection.tsx    # App download promotion section
+│   ├── MobileAppPrompt.tsx       # Mobile app download prompt
+│   └── QRCodeGenerator.tsx       # QR code generation tool
 ├── pages/              # Page components
 │   ├── HomePage.tsx    # Landing page
 │   ├── LoginPage.tsx   # Login page

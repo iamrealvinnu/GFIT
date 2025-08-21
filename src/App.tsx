@@ -5,12 +5,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedLogo from './components/AnimatedLogo';
 import BackgroundVideo from './components/BackgroundVideo';
+import MobileAppPrompt from './components/MobileAppPrompt';
 import HomePage from './pages/HomePage';
 import FitnessPage from './pages/FitnessPage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import PasswordResetPage from './pages/PasswordResetPage';
+import QRCodeGenerator from './components/QRCodeGenerator';
 
 const App: React.FC = () => {
   const [showLogo, setShowLogo] = useState(true);
@@ -40,11 +42,13 @@ const App: React.FC = () => {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignUpPage />} />
               <Route path="/password-reset" element={<PasswordResetPage />} />
+              <Route path="/qr-generator" element={<QRCodeGenerator />} />
             </Routes>
           </AnimatePresence>
         </main>
         
         <Footer />
+        <MobileAppPrompt />
       </div>
     </Router>
   );

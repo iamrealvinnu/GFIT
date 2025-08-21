@@ -13,8 +13,12 @@ import {
   Sparkles,
   Award
 } from 'lucide-react';
+import AppDownloadSection from '../components/AppDownloadSection';
+import HeroQRCode from '../components/HeroQRCode';
+import AppPreviewModal from '../components/AppPreviewModal';
 
 const HomePage: React.FC = () => {
+  const appPreviewRef = React.useRef<{ openModal: () => void }>(null);
 
   const membershipTiers = [
     {
@@ -165,17 +169,30 @@ const HomePage: React.FC = () => {
                   </motion.button>
                 </Link>
                 
+                <Link to="/signup">
+                  <motion.button
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                  >
+                    SIGN UP NOW
+                  </motion.button>
+                </Link>
+                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center space-x-2 text-neutral-700 hover:text-neutral-900 font-medium text-sm sm:text-base transition-colors duration-200"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <Play className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 ml-1" />
+                    <Play className="w-4 h-4 sm:w-5 sm:w-5 text-primary-600 ml-1" />
                   </div>
                   <span>Watch Demo</span>
                 </motion.button>
               </motion.div>
+
+              {/* Hero QR Codes */}
+              <HeroQRCode />
             </motion.div>
 
             {/* Right Content - Visual Elements */}
@@ -434,6 +451,9 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* App Download Section */}
+      <AppDownloadSection />
+
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -451,11 +471,20 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => appPreviewRef.current?.openModal()}
+                className="bg-white text-primary-600 px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-bold text-base sm:text-lg hover:bg-neutral-100 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Preview App
+              </motion.button>
+              
               <Link to="/signup">
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary-600 px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-bold text-base sm:text-lg hover:bg-neutral-100 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-bold text-base sm:text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Start Free Trial
                 </motion.button>
@@ -474,6 +503,9 @@ const HomePage: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* App Preview Modal */}
+      <AppPreviewModal ref={appPreviewRef} />
     </div>
   );
 };

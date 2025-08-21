@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/signup">
                 <button className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 xl:px-6 rounded-lg transition-colors duration-200 text-sm xl:text-base">
-                  Get Started
+                  Sign Up
                 </button>
               </Link>
             </div>
@@ -146,13 +146,13 @@ const Header: React.FC = () => {
                   >
                     Sign In
                   </Link>
-                  <Link
-                    to="/signup"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block w-full text-center py-2.5 sm:py-3 px-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200 text-base sm:text-lg"
-                  >
-                    Get Started
-                  </Link>
+                                      <Link
+                      to="/signup"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block w-full text-center py-2.5 sm:py-3 px-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200 text-base sm:text-lg"
+                    >
+                      Sign Up
+                    </Link>
                 </div>
               </div>
             </motion.div>
